@@ -1,27 +1,37 @@
-# LoginApp
+Este proyecto implementa un sistema básico de inicio de sesión utilizando Angular y Angular Material. El flujo principal permite al usuario iniciar sesión desde un formulario y redirigirse a una página de inicio (Home). También incluye un botón en la página de inicio que permite regresar al formulario de inicio de sesión.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+![image](https://github.com/user-attachments/assets/a4f30e3e-485a-4133-a8c7-7e6fb7434b3a)
 
-## Development server
+1.1 LoginComponent
+El componente LoginComponent es responsable de mostrar el formulario de inicio de sesión y gestionar la lógica para validar los datos y redirigir al usuario.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![image](https://github.com/user-attachments/assets/c635336d-8e0c-445c-96d4-736e75268db2)
 
-## Code scaffolding
+FormBuilder y FormGroup: Permiten construir y gestionar formularios reactivos. Email: genera el campo obligatorio y debe ser un correo válido.
+Contraseña:Es un campo obligator.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![image](https://github.com/user-attachments/assets/303dcf90-6e63-4eb1-8ee9-5574e738cff1)
 
-## Build
+aqui se agregaron los componentes mat-form-field para crear campos de entrada estilizados, mat-label para etiquetas y mat-error para mostrar mensajes de error si las validaciones fallan.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+este componente home nos dice que el usuario ya a ingresado correctamente
+![image](https://github.com/user-attachments/assets/ddea7aa4-4502-4050-83c4-6c1ce66a612b)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ya eb el html
+![image](https://github.com/user-attachments/assets/581acf63-a881-40e3-ba76-f18a544e908a)
 
-## Running end-to-end tests
+el boton de regresar hace que el usuario pueda rgresar al inicio de sesion
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+En los enrutamientos se definieron las rutas disponibles en la aplicación y las vincula con los componentes correspondientes.
 
-## Further help
+![image](https://github.com/user-attachments/assets/0217cc4a-00a3-4b55-8329-db5bd986a195)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+/login: Muestra el componente de inicio de sesión y /home: Muestra la página de bienvenida.
+
+
+para nuestro appmodule
+
+![image](https://github.com/user-attachments/assets/b9c6dd0a-2090-4c83-b44a-05823120e78c)
+
+Aqui se importan los módulos de Angular Material necesarios (MatInputModule, MatFormFieldModule, etc.), se Configuran las dependencias para formularios reactivos (ReactiveFormsModule) y se declaran y registran los componentes en la aplicación.
